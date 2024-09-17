@@ -11,15 +11,15 @@ This is a user authentication system built using the **MVC (Model-View-Controlle
 ## File Structure
 
 The project follows the MVC architecture, with the following structure:
-  mvc-signup-system/
+mvc-signup-system/
 │
 ├── app/
 │   ├── controllers/
-│   │   ├── _404.php
-│   │   ├── Home.php
-│   │   ├── Login.php
-│   │   ├── Logout.php
-│   │   └── Signup.php
+│   │   ├── 404.php
+│   │   ├── home.php
+│   │   ├── login.php
+│   │   ├── logout.php
+│   │   └── signup.php
 │   ├── core/
 │   │   ├── app.php
 │   │   ├── config.php
