@@ -10,6 +10,7 @@ This is a user authentication system built using the **MVC (Model-View-Controlle
 
 ## File Structure
 
+```
 The project follows the MVC architecture, with the following structure:
 mvc-signup-system/
 │
@@ -45,6 +46,7 @@ mvc-signup-system/
 │   ├── index.php
 │   ├── .htaccess
 │   └── robots.txt
+```
 
 ```markdown
 - **app/**: Contains the core application files, Controllers and views.
