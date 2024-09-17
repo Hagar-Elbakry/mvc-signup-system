@@ -48,7 +48,6 @@ mvc-signup-system/
 │   └── robots.txt
 ```
 
-```markdown
 - **app/**: Contains the core application files, Controllers and views.
   - **controllers/** : Handles user interactions and page logic (404, home, login, logout, signup).
   - **core/** : core functionality files such as app initialization, database connection and helper functions.
@@ -57,7 +56,7 @@ mvc-signup-system/
 
 - **puplic/**: Public assets and main entry point (`index.php`)
   - **assets/**: Contains all static assets like CSS, JS, Images and fonts.
-```  
+
 
 ## Technology Used
 
