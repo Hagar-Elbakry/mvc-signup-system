@@ -29,12 +29,22 @@
                         <h2 class="form-title">Create account</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
+                                <?php if(isset($signup_data)):?>
+                                    <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="Name" id="Name" placeholder="Your Name" value="<?php echo $signup_data['Name']?>"/>
+                                <?php else:?>
                                 <label for="Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="Name" id="Name" placeholder="Your Name"/>
+                                <?php endif;?>
                             </div>
                             <div class="form-group">
-                                <label for="Email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="Email" id="Email" placeholder="Your Email"/>
+                                <?php if(isset($signup_data) && !isset($errors['Email'])):?>
+                                    <label for="Email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="Email" id="Email" placeholder="Your Email" value="<?php echo $signup_data['Email']?>"/>
+                                <?php else:?>
+                                    <label for="Email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="Email" id="Email" placeholder="Your Email"/>
+                                <?php endif;?>    
                             </div>
                             <div class="form-group">
                                 <label for="Password"><i class="zmdi zmdi-lock"></i></label>
