@@ -13,6 +13,11 @@ class Signup {
             }
 
             $data['errors'] = $user->errors;
+            $signupData = [
+                'Name' => $_POST['Name'],
+                'Email' => $_POST['Email']
+            ];
+            $data['signup_data'] = $signupData; 
     }
         $this->view('signup',$data);
     }
