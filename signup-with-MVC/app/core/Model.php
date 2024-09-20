@@ -53,7 +53,14 @@ trait Model {
 
     public function insert($data) {
 
-        
+        $options = [
+            'cost'=>12
+        ];
+
+        if(isset($data['Password'])) {
+            $data['Password'] = password_hash($data['Password'], PASSWORD_BCRYPT, $options);
+        }
+
         //remove unwanted data
         if(!empty($this->allowecColumns)) {
             foreach($data as $key) {
@@ -71,7 +78,14 @@ trait Model {
 
     public function update($id, $data, $id_column='id') {
 
+        $options = [
+            'cost'=>12
+        ];
 
+        if(isset($data['Password'])) {
+            $data['Password'] = password_hash($data['Password'], PASSWORD_BCRYPT, $options);
+        }
+        
         //remove unwanted data
         if(!empty($this->allowecColumns)) {
             foreach($data as $key) {
