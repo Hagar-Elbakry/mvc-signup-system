@@ -4,9 +4,10 @@ This is a user authentication system built using the **MVC (Model-View-Controlle
 
 ## Features
 
-- User registration with form validation
-- User login and logout functionality
-- Session management to track logged-in users
+- User registration with form validation and password hashing for secure storage
+- User login and logout functionality with password verification
+- Session management to track logged-in users with secure session handling (cookie settings)
+- Retain user input data on validation errors during signup
 
 ## File Structure
 
