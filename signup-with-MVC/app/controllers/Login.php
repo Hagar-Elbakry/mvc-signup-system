@@ -9,7 +9,7 @@ class Login {
             $arr['Name'] = $_POST['Name'];
             $row = $user->first($arr);
             if($row) {
-                if($row->Password == $_POST['Password']) {
+                if(password_verify($_POST['Password'], $row->Password)) {
                     $_SESSION['USER'] = $row;
                     redirect('home');
                 }
